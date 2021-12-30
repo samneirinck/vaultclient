@@ -20,10 +20,16 @@ repositories {
 
 dependencies {
     implementation(compose.desktop.currentOs)
+
+    testImplementation("io.kotest:kotest-runner-junit5:5.0.3")
 }
 
 compose.desktop {
     application {
         mainClass = "MainKt"
     }
+}
+
+tasks.withType<Test> {
+    useJUnitPlatform()
 }
