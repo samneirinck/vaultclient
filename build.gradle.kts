@@ -5,6 +5,7 @@ version = "0.1"
 
 plugins {
     kotlin("jvm") version "1.6.10"
+    kotlin("plugin.serialization") version "1.6.10"
     id("org.jetbrains.compose") version "1.0.1"
 }
 
@@ -20,6 +21,7 @@ repositories {
 
 dependencies {
     implementation(compose.desktop.currentOs)
+    implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.3.2")
 
     testImplementation("io.kotest:kotest-runner-junit5:5.0.3")
 }
